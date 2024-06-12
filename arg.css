@@ -1,0 +1,132 @@
+.container{
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.col-md-6{
+    width: 50%; 
+}
+.product-image{
+    width: 250px;
+    height: 200px;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+}
+.product-thumbnails img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.product-thumbnails img:hover {
+    border-color: #007bff;
+}
+
+.product-name {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.product-price {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.product-actions {
+    margin-top: 20px;
+}
+.product-actions a{
+    display:block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #005cac;
+    text-decoration: none;
+}
+.product-actions a:hover{
+    color: #007bff;
+    text-decoration: none;
+}
+.btn-buy {
+    margin-right: 10px;
+}
+
+.radio-input input {
+    display: none;
+  }
+  
+  .radio-input {
+    --container_width: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: #fff;
+    color: #000000;
+    width: var(--container_width);
+    overflow: hidden;
+    border: 1px solid rgba(53, 52, 52, 0.226);
+  }
+  
+  .radio-input label {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 14px;
+  }
+  
+  .selection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: calc(var(--container_width) / 4);
+    z-index: 0;
+    left: 0;
+    top: 0;
+    transition: .15s ease;
+  }
+  
+  .radio-input label:has(input:checked) {
+    color: #fff;
+  }
+  
+  .radio-input label:has(input:checked) ~ .selection {
+    background-color: rgb(11 117 223);
+    display: inline-block;
+  }
+  
+  .radio-input label:nth-child(1):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 0/4));
+  }
+  
+  .radio-input label:nth-child(2):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 1/4));
+  }
+  
+  .radio-input label:nth-child(3):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 2/4));
+  }
+  
+  .radio-input label:nth-child(4):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 3/4));
+  }

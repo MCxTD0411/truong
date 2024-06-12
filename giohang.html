@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="giohang.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Giỏ hàng của bạn</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Kích thước</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng</th>
+                    <th>Địa chỉ</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Các mục trong giỏ hàng sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+        <div class="text-right">
+            <h3>Tổng cộng: <span id="cartTotal">0</span> VND</h3>
+            <button class="btn btn-primary" onclick="checkout()">Thanh toán</button>
+        </div>
+    </div>
+    <script>
+        function checkout() {
+        alert('Bạn đã thanh toan thành công');
+        window.location.href = 'index.html';
+    }
+    </script>
+</body>
+</html>

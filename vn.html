@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo VN</title>
+    <link rel="stylesheet" href="mu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-image">
+                    <img id="mainImage" src="aoVN.webp" class="img-fluid" alt="Main Image">
+                </div>
+                <div class="product-thumbnails mt-3">
+                    <img src="aoVN.webp" class="img-thumbnail" alt="Thumbnail 1" onclick="displayImage('aoMU.jpg')">
+                    <img src="aoVN1.webp" class="img-thumbnail" alt="Thumbnail 2" onclick="displayImage('aoMU2.jpg')">
+                    <img src="aoVN2.webp" class="img-thumbnail" alt="Thumbnail 3" onclick="displayImage('aoMU3.jpg')">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-info">
+                    <h2 class="product-name">Áo thi đấu đội tuyển Việt Nam</h2>
+                    <h2 class="product-name">Size</h2>
+                    <div class="radio-input">
+                        <label>
+                        <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
+                        <span>S</span>
+                        </label>
+                        <label>
+                          <input value="value-2" name="value-radio" id="value-2" type="radio">
+                        <span>M</span>
+                        </label>
+                        <label>
+                          <input value="value-3" name="value-radio" id="value-3" type="radio">
+                        <span>L</span>
+                        </label>
+                        <label>
+                          <input value="value-3" name="value-radio" id="value-3" type="radio">
+                        <span>XL</span>
+                        </label>
+                        <span class="selection"></span>
+                      </div>
+                    <p class="product-price">Giá: 190k</p>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-buy" onclick="buyNow()">Mua ngay</button>
+                        <button class="btn btn-success btn-add-to-cart fas fa-shopping-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                        <a href="index.html">Quay lại trang chủ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.img-thumbnail').click(function(){
+            var newSrc = $(this).attr('src');
+            $('#mainImage').attr('src', newSrc);
+        });
+    });
+    function displayImage(src) {
+        document.getElementById('mainImage').src = src;
+    }
+    function addToCart() {
+        window.location.href = 'giohang.html';
+    }
+    function buyNow() {
+        alert('Bạn đã mua thành công');
+        window.location.href = 'index.html';
+    }
+    </script>
+</body>
+</html>

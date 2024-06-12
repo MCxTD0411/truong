@@ -1,0 +1,313 @@
+.block_product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    gap:20px;
+  }
+  .block_product li{
+    list-style: none;
+  }
+  .card {
+    --accent-color:pink;
+    position: relative;
+    width: 240px;
+    background: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0.3rem;
+    transition: all 0.5s ease-in-out;
+  }  
+  .card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 50px 30px -20px;
+    cursor:pointer;
+  }
+  .card .image-container {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    border-radius: 0.7rem;
+    border-top-right-radius: 4rem;
+    margin-bottom: 1rem;
+  }  
+  .card .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  } 
+  .card .image-container .price {
+    position: absolute;
+    right: 0.7rem;
+    bottom: -1rem;
+    background: white;
+    color: var(--accent-color);
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 1rem 1rem 2rem 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 15px 0px;
+  } 
+  .favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .favorite input{
+    display: none;
+  }
+  .favorite ion-icon {
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  .favorite.active ion-icon {
+    color: #ff3f6c;
+  }  
+  .card .content {
+    padding: 0px 0.8rem;
+    margin-bottom: 1rem;
+  }  
+  .card .content .brand {
+    font-weight: 900;
+    color: #a6a6a6;
+  }
+    
+  .card .content .product-name {
+    font-weight: 700;
+    color: #666666;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+    
+  .card .content .color-size-container {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #a8a8a8;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .card .content .size-container .sizes .size-container {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+  }
+  .card .content .size-container .sizes .size-container .size {
+    height: 14px;
+  } 
+  .card .content .size-container .sizes .size-container .size .size-radio {
+    cursor: pointer;
+  }
+  .card .content .size-container .sizes .size-container .size .size-radio input {
+    display: none;
+  } 
+  .card .content .size-container .sizes .size-container .size .size-radio input:checked ~ .name {
+    background: var(--accent-color);
+    border-radius: 2rem 2rem 1.5rem 1.5rem;
+    color: white;
+  } 
+  .card .content .size-container .sizes .size-container .size .size-radio .name {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    aspect-ratio: 1.2/1;
+    text-decoration: none;
+    color: #484848;
+    font-size: 12px;
+    text-align: center;
+  }
+  .card .button-container {
+    display: flex;
+    gap: 0.3rem;
+  }
+  .card .button-container .button {
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .card .button-container .button:hover {
+  background: rgb(216, 216, 252);
+  }
+  .card .button-container .buy-button {
+    width:60%;
+  } 
+  .card .button-container .cart-button {
+    width: 40%;
+  }
+  .card .button-container .cart-button ion-icon{
+    display:none;
+  }
+  @media (max-width: 768px) {
+    .card {
+        width: 150px;
+    }
+    .size-container{
+      display:none;
+    }
+    .card .button-container .buy-button{
+      padding-top: 10px;
+      align-content: center;
+      justify-content: center;
+      width:80%;
+    }
+    .card .button-container .cart-button{
+      width:20%;
+    }
+    .card .button-container .cart-button p{
+      display:none;
+    }
+    .card .button-container .cart-button ion-icon{
+      display:block;
+    }
+  }
+  * {
+    box-sizing: border-box
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+#red:hover{
+  color: red;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #3498db;
+}
+
+.footer-section .social a {
+  color: #ecf0f1;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.footer-section .social a:hover {
+  color: #3498db;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #1a252f;
+  color: #ecf0f1;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+#FB{
+  color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      max-width: 400px;
+  }
+}
+#giohang:hover{
+  color: red;
+}
